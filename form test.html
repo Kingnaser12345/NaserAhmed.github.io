@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<script>
+function Validation()								 
+{ 
+	var firstname = document.forms["RegForm"]["firstname"];
+	var surname = document.forms["RegForm"]["lastname"];					 
+	var email = document.forms["RegForm"]["email"]; 
+	var phone = document.forms["RegForm"]["number"];   
+
+	if (firstname.value == "")								 
+	{ 
+		window.alert("Please enter your first name."); 
+		name.focus(); 
+		return false; 
+	}
+
+	if (lastname.value == "")								 
+	{ 
+		window.alert("Please enter your last name."); 
+		name.focus(); 
+		return false; 
+	} 
+	
+	if (email.value == "")								 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf("@", 0) < 0)				 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (email.value.indexOf(".", 0) < 0)				 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+
+	if (phone.value == "")						 
+	{ 
+		window.alert("Please enter your telephone number."); 
+		phone.focus(); 
+		return false; 
+	}
+
+	return true; 
+}</script> 
+<style type="text/css">
+
+	Validation {										 
+	margin-left: 70px; 
+	font-weight: bold ; 
+	float: left; 
+	clear: left; 
+	width: 100px; 
+	text-align: left; 
+	margin-right: 10px; 
+	font-family:sans-serif,bold, Arial, Helvetica; 
+	font-size:14px; 
+	} 
+
+
+	input[type=text], select, input[type=email] {
+		width: 150px;
+		height: auto;
+  		padding: 5px 10px 0 10px;
+  		margin: 8px 0;
+		display: inline-block;
+		border: none;
+		border-bottom: 4.3px solid #32A545;
+		font-size: 12px;
+		font-weight: bold;
+		background: #E7FDEB;
+	}
+
+	input[type=date]{
+		width: 150px;
+		height: auto;
+  		padding: 5px 10px 0 10px;
+  		margin: 8px 0;
+		display: inline-block;
+		border: none;
+		border-bottom: 4.3px solid #32A545;
+		font-size: 12px;
+		font-weight: bold;
+		background: #E7FDEB;
+	}
+
+	input[type=submit] {
+		width: 49.5%;
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		float: left;
+	}
+
+	input[type=radio] {
+		margin-right: 0;
+	}
+
+	input[type=submit]:hover {
+		background-color: #45a049;
+		color: white;
+	}
+
+	input[type=reset] {
+		width: 49.5%;
+		background-color: #4CAF50;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		float: right;
+		margin-left: 4px;
+	}
+	input[type=reset]:hover {
+		background-color: #45a049;
+	}
+
+	.box {
+		border-radius: 5px;
+		background-color: #E7FDEB;
+		padding: 20px;
+		border: #32A545 solid 4.3px;
+	}
+
+	.questionmark {
+		border: solid 2px white;
+		border-radius: 3px;
+		outline: solid 3px black;
+		padding: 0;
+		margin: 0 8px;
+		width: 15px;
+		height: 16px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 16px;
+		position: relative;
+		display: inline-block;
+		background-color: #333;
+		color: #f4f4f4;
+	}
+
+	.questionmark .info{
+		visibility: hidden;
+		width: 130px;
+		height: auto;
+		background-color: #333;
+		color: #f4f4f4;
+		background-color: black;
+		border: 1px dashed grey;
+		border-radius: 6px;
+		padding: 0;
+		background-color: #333;
+		opacity: 0;
+		transition: opacity 1s;
+		position: absolute;
+		right: 20px;
+		z-index: 1;
+		font-size: 12px;
+		word-wrap: break-word;
+	}
+
+	.questionmark:hover .info{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	Validation {										 
+	margin-left: 70px; 
+	font-weight: bold ; 
+	float: left; 
+	clear: left; 
+	width: 100px; 
+	text-align: left; 
+	margin-right: 10px; 
+	font-family:sans-serif,bold, Arial, Helvetica; 
+	font-size:14px; 
+} 
+
+</style>
+
+<body>
+<div class="box">
+<form name="RegForm" action="home.html" onsubmit="return Validation()" method="post" autocomplete="off">
+	<label>Personal Information:</label><br>
+<br>
+	<label for="Jobtitle">Job title:</label>
+	<select name="Job title" id="jobtitle" style="width:200px" placeholder="Please a job" autofocus required>
+	<option value="Web developer (Front-End)">Web developer (Front-End)</option>
+	<option value="Web developer (Back-End)">Web developer (Back-End)</option>
+	<option value="Team manager"> Team manager</option>
+	<option value="Mobile developer">Mobile developer</option>
+    </select>
+    <div class="questionmark">?
+    <span class="info">Please select a job.</span></div>
+<br>
+	<label for="firstname">First name:</label>
+	<input type="text" id="firstname" name="firstname" placeholder="Bruce" required><br>
+	<label for="Surname">Surname:</label>
+	<input type="text" id="surname" name="lastname" placeholder="Wayne" required> <br>
+<br>
+	<label for="gender">Gender:</label>
+	<select name="Gender" id="gender" style="width:130px" placeholder="Please select your gender" required>
+	<option value="Male"> Male </option>
+	<option value="Female"> Female </option>
+	<option value="Other"> Other </option>
+	<option value="Prefer not to say"> Prefer not to say </option>
+    </select>
+    <div class="questionmark">?
+    <span class="info">Please select a gender.</span></div>
+<br>
+<br>
+	<label for="DOB">DOB:</label>
+	<input type="date" id="dob" name="bday"  required max="2000-12-31"> <br>
+<br>
+	<label for="email">E-mail:</label>
+	<input type="email" id="email" name="email" placeholder="unknown@gmail.com" required> 
+	<div class="questionmark">?
+    <span class="info">Enter your email.</span></div><br>
+<br>
+	<label for="number">Phone number:</label>
+	<input type="text" id="number" name="number" size="11" pattern="[0-9]{11}" maxlength="11" placeholder="07835683542" required>     <div class="questionmark">?
+    <span class="info">Please enter your 11-digit phone number.</span></div><br>
+</div>
+<br>
+<div class="box">
+	<label>Questions:</label>
+	<br><br>
+	<label for="skill_level">Skill level:</label> <br>
+	<input type="radio" name="skill_level" value="Novice"> Novice
+	<input type="radio" name="skill_level" value="Good"> Average
+	<input type="radio" name="skill_level" value="Expert"> Expert
+<br><br>
+	<label for="qualifications">Which of the following qualifications do you possess?</label> <br>
+	<input type="checkbox" name="qalification" value="Javascript"> Javascript<br>
+	<input type="checkbox" name="qalification" value="Python"> Python<br>
+	<input type="checkbox" name="qalification" value="PHP"> PHP <br>
+	<br>
+	<label for="cv">CV/Cover letter:</label> 
+	<div class="questionmark">?
+    <span class="info">Please upload your CV and/or Cover letter:</span></div> <br>
+	<input type="file" name="myFile" multiple required> <br>
+</div>
+
+	<input type="submit" value="Submit">
+	<input type="reset">
+</form>
+</form>
+</body>
+</html>

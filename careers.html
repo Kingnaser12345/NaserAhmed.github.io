@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="refresh" content="60">
+  <link rel="stylesheet" href="style.css">
+  
+<style>
+.jobs {
+  background-color: #32A545;
+  color: #f4f4f4;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .jobs:hover {
+  background-color: #333;
+}
+
+.jobs:after {
+  content: '\002B';
+  color: #f4f4f4;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+  color: #f4f4f4;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #656565;
+  color: white;
+  font-weight: bold;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.apply {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  margin-bottom: 5px;
+  width: 70px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.apply:hover {
+  background-color: #555555;
+  color: white;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+</style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <span class="open-side">
+      <a href="#" onclick="openSideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+
+    <div class="logo"><a href="home.html"><img src="images/Logo-imp.png" width="74px"></a></div>
+
+    <ul class="navbar-nav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="profile.html">Profiles</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="courses.html">Courses</a></li>
+    </ul>
+  </nav>
+
+  <div id="side-menu">
+    <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+    <div class="side-logo"><a href="home.html"><img src="images/Logo-imp.png" width="137px"></a></div>
+    <div class="clearfix"></div>
+    <a href="home.html">Home</a>
+    <a href="profile.html">Profiles</a>
+    <a href="careers.html">Careers</a>
+    <a href="courses.html">Courses</a>
+    <div class="clearfix"></div>
+    <div class="find-map">
+    <p>Where to find us:</p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.441904707548!2d-0.02004214866512128!3d51.50510827953478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b753f560a1%3A0x7ee1a00579021c43!2sCanada+Square%2C+Canary+Wharf%2C+London!5e0!3m2!1sen!2suk!4v1556627768971!5m2!1sen!2suk" width="186" height="250" frameborder="0" style="border: 0; margin: 0 7px;" allowfullscreen></iframe>
+    <div class="copyright">
+      <p>
+        Copyright &copy; 2019 Naser's Website.
+      </p>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="c-title">
+      <h1>Current Vacancies</h>
+    </div>
+    <div id="job-options">
+      <button class="jobs">Web developer (Front-End)</button>
+      <div class="panel">
+        <p>Responsibilities:</p>
+        <ul>
+          <li>Improving user experience.</li>
+          <li>Modification and maintenance of websites and web application user interfaces.</li>
+          <li>Creating tools that enhance how users see and interact with your site in any browser.</li>
+          <li>Contributing some back-end experience, collaborating on APIs, and more.</li>
+          <li>Maintaining software workflow management.</li>
+          <li>Testing the site during development for usability and fixing any bugs.</li>
+        </ul>
+
+        <p>Required skills:</p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>BootStrap</li>
+        </ul>
+        <button class="apply" onclick="window.location.href = 'form test.html';">Apply</button>
+      </div>
+
+      <button class="jobs">Web developer (Back-End)</button>
+      <div class="panel">
+        <p>Responsibilities:</p>
+        <ul>
+          <li>Database creation, integration, and management.</li>
+          <li>Using back-end frameworks to build server-side software.</li>
+          <li>Cloud computing integration.</li>
+          <li>API integration.</li>
+          <li>Security settings and hack prevents.</li>
+          <li>Reporting—generating analytics and statistics like system reports of server load, number of visitors, geography of visitors, etc.</li>
+        </ul>
+        <p>Required Skills:</p>
+        <ul>
+          <li>Ruby</li>
+          <li>Java</li>
+          <li>C#</li>
+          <li>Python</li>
+          <li>PHP</li>
+          <li>Perl</li>
+          <li>Node.js</li>
+        </ul>
+        <button class="apply" onclick="window.location.href = 'form test.html';">Apply</button>
+      </div>
+
+      <button class="jobs">Mobile developer</button>
+      <div class="panel">
+        <p>Responsibilities:</p>
+        <ul>
+          <li>Developing APIs to support mobile functionality.</li>
+          <li>Keeping up to date with the terminology, concepts and best practices for coding mobile apps</li>
+          <li>Using and adapting existing web applications for apps.</li>
+          <li>Collaberative innovation of app functionality and design.</li>
+        </ul>
+        <p>Required Skills:</p>
+        <ul>
+          <li>C#</li>
+          <li>Java</li>
+          <li>Swift</li>
+          <li>Python</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Javascript</li>
+        </ul>
+        <button class="apply" onclick="window.location.href = 'form test.html';">Apply</button>
+      </div>
+    </div>
+
+  </div>
+<script src="logic.js"></script>
+</body>
+</html>

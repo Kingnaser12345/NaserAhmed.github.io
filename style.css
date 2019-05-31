@@ -1,0 +1,293 @@
+html, body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #E7FDEB;
+  overflow-x:hidden;
+  line-height: 1.6em;
+  font-size: 16px;
+  margin: auto 0;
+  padding: 0;
+  height: 100%;
+  width:100%;
+}
+
+/* Start of navbar style */
+.logo{
+  margin: 0;
+  padding: 0;
+  float:left;
+}
+
+.side-logo{
+  padding: 0;
+  float: left;
+}
+
+.side-logo a{
+  border-bottom: solid #f4f4f4 solid;
+}
+
+.open-side{
+  float: right;
+  margin-top: 16.5px;
+  padding: 0;
+}
+.navbar{
+  background-color:#32A545;
+  overflow:hidden;
+  height:60px;
+  border-bottom: 4.3px solid #333;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: +1;
+}
+
+.navbar li{
+  float: left;
+}
+
+.navbar a{
+  text-decoration:none;
+  color:#f2f2f2;
+  text-align:center;
+  font-size: 18.5px;
+  padding: 21px 16px;
+}
+
+.navbar ul{
+  margin: 18px 0 0 0;
+  list-style:none;
+  display: inline;
+  float:right;
+}
+
+.navbar-nav a:hover{
+  background-color: #333;
+  color:#f2f2f2;
+}
+
+#side-menu{
+  height:100%;
+  width:0;
+  position:absolute;
+  z-index:1;
+  top:0;
+  right:0;
+  background-color:#111;
+  opacity:0.9;
+  overflow-x:hidden;
+  padding-top:60px;
+  transition:0.5s;
+}
+
+#side-menu a{
+  padding:10px 10px 10px 30px;
+  text-decoration:none;
+  font-size:22px;
+  color:#ccc;
+  display:block;
+  transition:0.3s;
+}
+
+#side-menu a:hover{
+  color:#fff;
+}
+
+.copyright{
+  padding: 0;
+  margin: 0 0 0 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+.copyright p{
+  color: #f4f4f4;
+  padding: 0;
+  font-size: 15px;
+  text-align: center; 
+}
+
+.find-map p {
+  color: #f4f4f4;
+  padding: 0;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center; 
+}
+
+#side-menu .btn-close{
+  position:absolute;
+  top:0;
+  right: 0;
+  font-size:36px;
+  margin-left: 10px;
+}
+/* End of navbar style */
+
+/* Main content for all pages */
+#main{
+  transition:margin-right 0.5s;
+  padding:20px;
+  overflow:hidden;
+  min-height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Gallery style */
+.gallery{
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery img{
+  box-sizing: border-box;
+  width: 32.33%;
+  height: auto;
+  float: left;
+  margin: 1px 3px;
+}
+
+/* Index Page text */
+.index-text {
+  background-color: #333;
+  color: #f4f4f4;
+  font-weight: bold;
+  padding: 5px 40px;
+  margin: auto;
+  text-align: left;
+}
+
+/* Careers page header style */
+.c-title h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* Profile page flip-box test*/
+
+.flip-box {
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  margin: 5px 0;
+  float: left;
+  overflow: none;
+}
+
+.flip-box-inner img{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  padding: auto;
+}
+
+.flip-box-inner {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  color: black;
+  background-color: #333;
+}
+
+.flip-box-back {
+  background-color: #333;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Courses page images*/
+.courses{
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.courses img{
+  width: 70%;
+  padding: 40px 0;
+  margin: 5px 0;
+}
+
+.courses h1 {
+  width: 70%;
+  line-height: 40px;
+  padding-top: 20px;
+  margin: auto;
+}
+
+
+/* Responsiveness */
+@media only screen and (max-width: 841px) {
+  .gallery-img:nth-child(n){
+    margin-bottom: 3px;
+    width: 48.45%;
+  }
+
+  .gallery-img:nth-child(2n){
+    margin-bottom: 3px;
+    width: 48.45%;
+    
+  }
+
+  .gallery-img:nth-child(3n){
+    width:98.21%;
+    align-content:center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gallery-img:nth-child(n){
+    width:98.21%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#main-content{
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@media(max-width:600px){
+  .navbar-nav{display:none}
+}
+@media(min-width:600px){
+  .open-side{
+    display:none;
+}
+}
+@media(max-width:600px){
+  #main-content{
+    width: 100%;
+    float: none;
+  }
+}
